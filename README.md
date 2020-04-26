@@ -1,9 +1,9 @@
 # web-scraping
 
-BeautifulSoup
-Pandas
-Requests/Splinter
-MongoDB
-Flask
-HTML
-Bootstrap
+* BeautifulSoup
+* Pandas
+* Requests/Splinter
+* MongoDB
+* Flask
+* HTML
+* Bootstrap
