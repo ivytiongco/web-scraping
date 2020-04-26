@@ -10,6 +10,6 @@ You will build a web application that scrapes various websites for data related 
 * HTML
 * Bootstrap
 
-Missions_to_Mars folder contains:
+## Missions_to_Mars folder contains:
 
 * mission_to_mars.ipynb jupyter notebook
