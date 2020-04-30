@@ -15,8 +15,8 @@ def scrape():
 
 # NASA Mars News
     # URL of page to be scraped
-    url = 'https://mars.nasa.gov/news/?page=0&per_page=40&order=publish_date+desc%2Ccreated_at+desc&search=&category=19%2C165%2C184%2C204&blank_scope=Latest'
-    browser.visit(url)
+    nasa_url = 'https://mars.nasa.gov/news/?page=0&per_page=40&order=publish_date+desc%2Ccreated_at+desc&search=&category=19%2C165%2C184%2C204&blank_scope=Latest'
+    browser.visit(nasa_url)
     time.sleep(1)
 
     # Scrape page into Soup
@@ -36,8 +36,8 @@ def scrape():
 
 # JPL Mars Space Images - Featured Image    
     # URL of page to be scraped
-    url = 'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'
-    browser.visit(url)
+    jpl_url = 'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'
+    browser.visit(jpl_url)
     time.sleep(1)
 
     # Scrape page into Soup
@@ -48,14 +48,14 @@ def scrape():
     link = image.find('a')
     image_url = link['data-fancybox-href']
 
-    featured_image_url = url + image_url
+    featured_image_url = jpl_url + image_url
     mars_data['featured_image_url'] = featured_image_url
 
 # Mars Weather twitter account 
     # URL of page to be scraped
 
-    url = 'https://twitter.com/marswxreport?lang=en'
-    browser.visit(url)
+    tweet_url = 'https://twitter.com/marswxreport?lang=en'
+    browser.visit(tweet_url)
     time.sleep(1)
 
     html = browser.html
@@ -66,11 +66,11 @@ def scrape():
 
 # Mars Facts webpage
 
-    url = 'https://space-facts.com/mars/'
-    browser.visit(url)
+    facts_url = 'https://space-facts.com/mars/'
+    browser.visit(facts_url)
     time.sleep(1)
 
-    tables = pd.read_html(url)
+    tables = pd.read_html(facts_url)
     df = tables[0]
     df.columns = ['measurement', 'value']
     html_table = df.to_html()
@@ -89,9 +89,10 @@ def scrape():
     html = browser.html
     soup = BeautifulSoup(html, 'html.parser')
 
-    wrapper = soup.find('div', class_='wide-image-wrapper')
-    img = wrapper.find('img', class_='wide-image')['src']
-    cer_image_url = 'https://astrogeology.usgs.gov' + img
+    download = soup.find('div', class_='downloads')
+    ul_list = download.find('ul')
+    li_list = ul_list.find_all('li')[1]
+    cer_image_url = li_list.a['href']
 
     container = soup.find('div', class_='container')
     content = container.find('div', class_='content')
@@ -109,9 +110,10 @@ def scrape():
     html = browser.html
     soup = BeautifulSoup(html, 'html.parser')
 
-    wrapper = soup.find('div', class_='wide-image-wrapper')
-    img = wrapper.find('img', class_='wide-image')['src']
-    sch_image_url = 'https://astrogeology.usgs.gov' + img
+    download = soup.find('div', class_='downloads')
+    ul_list = download.find('ul')
+    li_list = ul_list.find_all('li')[1]
+    sch_image_url = li_list.a['href']
 
     container = soup.find('div', class_='container')
     content = container.find('div', class_='content')
@@ -129,9 +131,10 @@ def scrape():
     html = browser.html
     soup = BeautifulSoup(html, 'html.parser')
 
-    wrapper = soup.find('div', class_='wide-image-wrapper')
-    img = wrapper.find('img', class_='wide-image')['src']
-    syr_image_url = 'https://astrogeology.usgs.gov' + img
+    download = soup.find('div', class_='downloads')
+    ul_list = download.find('ul')
+    li_list = ul_list.find_all('li')[1]
+    syr_image_url = li_list.a['href']
 
     container = soup.find('div', class_='container')
     content = container.find('div', class_='content')
@@ -150,9 +153,10 @@ def scrape():
     html = browser.html
     soup = BeautifulSoup(html, 'html.parser')
 
-    wrapper = soup.find('div', class_='wide-image-wrapper')
-    img = wrapper.find('img', class_='wide-image')['src']
-    val_image_url = 'https://astrogeology.usgs.gov' + img
+    download = soup.find('div', class_='downloads')
+    ul_list = download.find('ul')
+    li_list = ul_list.find_all('li')[1]
+    val_image_url = li_list.a['href']
 
     container = soup.find('div', class_='container')
     content = container.find('div', class_='content')
