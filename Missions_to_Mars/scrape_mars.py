@@ -23,12 +23,7 @@ def scrape():
     html = browser.html
     soup = bs(html, "html.parser")
 
-    # WHY NOT PRINTING LATEST ARTICLE ???
-#    title = soup.find('div', class_='content_title')
-#    news_title = title.a.text.strip()
     news_title = soup.find('div', class_='content_title').text
-
-#    news_p = soup.find('div', class_='article_teaser_body')
     news_p = soup.find('div', class_='rollover_description_inner').text
 
     mars_data['news_title'] = news_title
@@ -98,6 +93,7 @@ def scrape():
     content = container.find('div', class_='content')
     meta = content.find('section', class_='block metadata')
     cer_title = meta.h2.text
+    cer_title = cer_title_enhanced.replace(" Enhanced", "") 
 
     cer = {"title": cer_title, "img_url": cer_image_url}
     hemisphere_img_urls.append(cer)
@@ -119,6 +115,7 @@ def scrape():
     content = container.find('div', class_='content')
     meta = content.find('section', class_='block metadata')
     sch_title = meta.h2.text
+    sch_title = sch_title_enhanced.replace(" Enhanced", "") 
 
     sch = {"title": sch_title, "img_url": sch_image_url}
     hemisphere_img_urls.append(sch)
@@ -140,6 +137,7 @@ def scrape():
     content = container.find('div', class_='content')
     meta = content.find('section', class_='block metadata')
     syr_title = meta.h2.text
+    syr_title = syr_title_enhanced.replace(" Enhanced", "")
 
     syr = {"title": syr_title, "img_url": syr_image_url}
     hemisphere_img_urls.append(syr)
@@ -162,6 +160,7 @@ def scrape():
     content = container.find('div', class_='content')
     meta = content.find('section', class_='block metadata')
     val_title = meta.h2.text
+    val_title = val_title_enhanced.replace(" Enhanced", "")
 
     val = {"title": val_title, "img_url": val_image_url}
     hemisphere_img_urls.append(val)
