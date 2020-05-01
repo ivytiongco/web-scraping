@@ -17,3 +17,5 @@ You will build a web application that scrapes various websites for data related 
 * scrape_mars.py
 * templates folder
   * index.html
+* Screenshot of final application
+  * screenshot_final_application.png
