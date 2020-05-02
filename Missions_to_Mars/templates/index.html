@@ -22,14 +22,14 @@
       <div class="col-md-12">
             <h2 class="heading">Latest Mars News</h2>
             <h3 class="heading">{{ mars.news_title }}</h3>
-        <small>{{ mars.news_p }}</small>
+        {{ mars.news_p }}
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-9">
         <h2 class="heading">Featured Mars Image</h2>
-        <img src= "{{ featured_image_url }}">
+        <img class="img-responsive" src= "{{ mars.featured_image_url }}">
       </div>
       <div class="col-md-3">
         <div class="card" style="width: 20rem;">
@@ -53,12 +53,8 @@
     <div class="row">
       {% for hemisphere in mars['hemisphere_image_urls'] %}
         <div class="col-md-6">
-          <div class="card">
-            <div class="card-body">              
-              <img src= "{{ hemisphere.img_url }}" >
-              <h4 class="card-title">{{ hemisphere.title }}</h4>
-            </div>
-          </div>
+          <img class="img-responsive" src= "{{ hemisphere.img_url }}" >
+          <h3>{{ hemisphere.title }}</h3>
         </div>
       {% endfor %}
     </div>
