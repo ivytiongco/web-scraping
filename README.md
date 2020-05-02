@@ -15,21 +15,21 @@ You will build a web application that scrapes various websites for data related 
 * templates folder
   * index.html
 * Screenshots of final application
-  * screenshot_final_application_1.png
-  * screenshot_final_application_2.png
-  * screenshot_final_application_3.png
-  * screenshot_final_application_4.png
+  * screenshot_final_application_1.jpg
+  * screenshot_final_application_2.jpg
+  * screenshot_final_application_3.jpg
+  * screenshot_final_application_4.jpg
 
 ## Screenshots of Final Application
 
 Screenshot 1
-![](Missions_to_Mars/screenshot_final_application_1.png)
+![](Missions_to_Mars/screenshot_final_application_1.jpg)
 
 Screenshot 2
-![](Missions_to_Mars/screenshot_final_application_2.png)
+![](Missions_to_Mars/screenshot_final_application_2.jpg)
 
 Screenshot 3
-![](Missions_to_Mars/screenshot_final_application_3.png)
+![](Missions_to_Mars/screenshot_final_application_3.jpg)
 
 Screenshot 4
-![](Missions_to_Mars/screenshot_final_application_4.png)
+![](Missions_to_Mars/screenshot_final_application_4.jpg)
