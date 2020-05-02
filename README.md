@@ -9,6 +9,8 @@ You will build a web application that scrapes various websites for data related 
 * Flask
 * HTML
 * Bootstrap
+* Selenium
+* Python modules for regular expressions and time
 
 ## Missions_to_Mars folder contains:
 
