@@ -58,7 +58,6 @@ def scrape():
     soup = BeautifulSoup(html, 'html.parser')
 
     mars_weather = soup.find('span', text = re.compile('2020-04-30')).text
-#    mars_weather = soup.find_all('span', text = re.compile(r'\d{4}-\d{2}-\d{2}'))[0].text
     mars['mars_weather'] = mars_weather
 
     # Visit the Mars Facts webpage and use Pandas to scrape the table containing facts about the planet
