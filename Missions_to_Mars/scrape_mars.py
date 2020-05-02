@@ -50,15 +50,16 @@ def scrape():
 
     # Visit the Mars Weather twitter account and scrape the latest Mars weather tweet from the page. 
     # Save the tweet text for the weather report as a variable called mars_weather.
-#    tweet_url = 'https://twitter.com/marswxreport?lang=en'
-#    browser.visit(tweet_url)
- #   time.sleep(1)
+    tweet_url = 'https://twitter.com/marswxreport?lang=en'
+    browser.visit(tweet_url)
+    time.sleep(1)
 
-#    html = browser.html
- #   soup = BeautifulSoup(html, 'html.parser')
+    html = browser.html
+    soup = BeautifulSoup(html, 'html.parser')
 
+    mars_weather = soup.find('span', text = re.compile('2020-04-30')).text
 #    mars_weather = soup.find_all('span', text = re.compile(r'\d{4}-\d{2}-\d{2}'))[0].text
-#    mars['mars_weather'] = mars_weather
+    mars['mars_weather'] = mars_weather
 
     # Visit the Mars Facts webpage and use Pandas to scrape the table containing facts about the planet
     # including Diameter, Mass, etc.
