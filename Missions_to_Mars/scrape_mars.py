@@ -45,7 +45,7 @@ def scrape():
     link = image.find('a')
     image_url = link['data-fancybox-href']
 
-    featured_image_url = jpl_url + image_url
+    featured_image_url = 'https://www.jpl.nasa.gov' + image_url
     mars['featured_image_url'] = featured_image_url
 
     # Visit the Mars Weather twitter account and scrape the latest Mars weather tweet from the page. 
@@ -86,10 +86,10 @@ def scrape():
     soup = BeautifulSoup(html, 'html.parser')
 
     # Find image url
-    dl = soup.find('dl')
-    dd = dl.find_all('dd')[1]
-    cer_image_url = dd.a['href']
-
+    wrapper = soup.find('div', class_='wide-image-wrapper')
+    img = wrapper.find('img', class_='wide-image')['src']
+    cer_image_url = 'https://astrogeology.usgs.gov' + img
+    
     # Find image title
     cer_title_enhanced = soup.find('section', class_='block metadata').h2.text
     cer_title = cer_title_enhanced.replace(" Enhanced", "") 
@@ -107,9 +107,9 @@ def scrape():
     soup = BeautifulSoup(html, 'html.parser')
 
     # Find image url
-    dl = soup.find('dl')
-    dd = dl.find_all('dd')[1]
-    sch_image_url = dd.a['href']
+    wrapper = soup.find('div', class_='wide-image-wrapper')
+    img = wrapper.find('img', class_='wide-image')['src']
+    sch_image_url = 'https://astrogeology.usgs.gov' + img
 
     # Find image title
     sch_title_enhanced = soup.find('section', class_='block metadata').h2.text
@@ -128,9 +128,9 @@ def scrape():
     soup = BeautifulSoup(html, 'html.parser')
 
     # Find image url
-    dl = soup.find('dl')
-    dd = dl.find_all('dd')[1]
-    syr_image_url = dd.a['href']
+    wrapper = soup.find('div', class_='wide-image-wrapper')
+    img = wrapper.find('img', class_='wide-image')['src']
+    syr_image_url = 'https://astrogeology.usgs.gov' + img
 
     # Find image title
     syr_title_enhanced = soup.find('section', class_='block metadata').h2.text
@@ -149,9 +149,9 @@ def scrape():
     soup = BeautifulSoup(html, 'html.parser')
 
     # Find image url
-    dl = soup.find('dl')
-    dd = dl.find_all('dd')[1]
-    val_image_url = dd.a['href']
+    wrapper = soup.find('div', class_='wide-image-wrapper')
+    img = wrapper.find('img', class_='wide-image')['src']
+    val_image_url = 'https://astrogeology.usgs.gov' + img
 
     # Find image title
     val_title_enhanced = soup.find('section', class_='block metadata').h2.text

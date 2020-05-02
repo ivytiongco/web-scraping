@@ -123,3 +123,32 @@
 [0501/200105.960:ERROR:exception_snapshot_win.cc(98)] thread ID 7500 not found in process
 [0501/200106.056:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
 [0501/200106.056:ERROR:exception_snapshot_win.cc(98)] thread ID 5524 not found in process
+[0501/214828.381:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0501/214828.383:ERROR:exception_snapshot_win.cc(98)] thread ID 14388 not found in process
+[0501/214828.405:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0501/214828.405:ERROR:exception_snapshot_win.cc(98)] thread ID 6724 not found in process
+[0501/214828.410:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0501/214828.411:ERROR:exception_snapshot_win.cc(98)] thread ID 5044 not found in process
+[0501/214828.487:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0501/214828.487:ERROR:exception_snapshot_win.cc(98)] thread ID 4080 not found in process
+[0501/214828.521:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0501/214828.522:ERROR:exception_snapshot_win.cc(98)] thread ID 16168 not found in process
+[0501/214828.569:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0501/214828.569:ERROR:exception_snapshot_win.cc(98)] thread ID 356 not found in process
+[0501/215313.465:ERROR:process_info.cc(329)] VirtualQueryEx: Access is denied. (0x5)
+[0501/215313.583:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0501/215313.583:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
+[0501/215313.583:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)
+[0501/215313.523:ERROR:scoped_process_suspend.cc(31)] NtSuspendProcess: An attempt was made to access an exiting process. (0xc000010a)
+[0501/215313.607:ERROR:process_info.cc(118)] ReadProcessMemory bool __cdecl crashpad::(anonymous namespace)::ReadStruct(HANDLE, crashpad::WinVMAddress, T *) [T = crashpad::process_types::PEB<crashpad::process_types::internal::Traits64>]: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0501/215313.607:ERROR:process_info.cc(551)] ReadProcessData failed
+[0501/215313.612:ERROR:scoped_process_suspend.cc(31)] NtSuspendProcess: An attempt was made to access an exiting process. (0xc000010a)
+[0501/215313.612:ERROR:scoped_process_suspend.cc(31)] NtSuspendProcess: An attempt was made to access an exiting process. (0xc000010a)
+[0501/215313.613:ERROR:process_info.cc(118)] ReadProcessMemory bool __cdecl crashpad::(anonymous namespace)::ReadStruct(HANDLE, crashpad::WinVMAddress, T *) [T = crashpad::process_types::PEB<crashpad::process_types::internal::Traits64>]: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0501/215313.613:ERROR:process_info.cc(118)] ReadProcessMemory bool __cdecl crashpad::(anonymous namespace)::ReadStruct(HANDLE, crashpad::WinVMAddress, T *) [T = crashpad::process_types::PEB<crashpad::process_types::internal::Traits64>]: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0501/215313.613:ERROR:process_info.cc(551)] ReadProcessData failed
+[0501/215313.613:ERROR:process_info.cc(551)] ReadProcessData failed
+[0501/215313.710:ERROR:process_info.cc(329)] VirtualQueryEx: Access is denied. (0x5)
+[0501/215313.710:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0501/215313.710:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
+[0501/215313.710:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)
