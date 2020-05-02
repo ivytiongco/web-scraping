@@ -12,6 +12,11 @@ You will build a web application that scrapes various websites for data related 
 * Selenium
 * Python modules for regular expressions and time
 
+### Steps done:
+
+1. Complete your initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, Requests/Splinter, Selenium, and Python modules for regular expressions and time.
+2. Use MongoDB with Flask templating to create a new HTML page that displays all of the information that was scraped from the URLs above.
+
 ## Missions_to_Mars folder contains:
 
 * mission_to_mars.ipynb jupyter notebook
