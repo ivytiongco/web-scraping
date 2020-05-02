@@ -22,7 +22,7 @@ You will build a web application that scrapes various websites for data related 
 
 ## Screenshots of Final Application
 
-![](screenshot_final_application_1.png)
-![](screenshot_final_application_2.png)
-![](screenshot_final_application_3.png)
-![](screenshot_final_application_4.png)
+![](Missions_to_Mars/screenshot_final_application_1.png)
+![](Missions_to_Mars/screenshot_final_application_2.png)
+![](Missions_to_Mars/screenshot_final_application_3.png)
+![](Missions_to_Mars/screenshot_final_application_4.png)
