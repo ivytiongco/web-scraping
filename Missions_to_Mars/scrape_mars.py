@@ -21,14 +21,14 @@ def scrape():
     # Scrape the NASA Mars News Site
     nasa_url = 'https://mars.nasa.gov/news/?page=0&per_page=40&order=publish_date+desc%2Ccreated_at+desc&search=&category=19%2C165%2C184%2C204&blank_scope=Latest'
     browser.visit(nasa_url)
-    time.sleep(1)
+    time.sleep(15)
 
     html = browser.html
     soup = BeautifulSoup(html, 'html.parser')
 
     # Collect the latest News Title and Paragraph Text
-    news_title = soup.find('div', class_='content_title').text
-    news_p = soup.find('div', class_='rollover_description_inner').text
+    news_title = soup.find_all('div', class_='content_title')[1].a.text
+    news_p = soup.find_all('div', class_='article_teaser_body')[0].text
     mars['news_title'] = news_title
     mars['news_p'] = news_p
 
@@ -52,12 +52,12 @@ def scrape():
     # Save the tweet text for the weather report as a variable called mars_weather.
     tweet_url = 'https://twitter.com/marswxreport?lang=en'
     browser.visit(tweet_url)
-    time.sleep(1)
+    time.sleep(15)
 
     html = browser.html
     soup = BeautifulSoup(html, 'html.parser')
 
-    mars_weather = soup.find('span', text = re.compile('2020-04-30')).text
+    mars_weather = soup.find_all('span', text = re.compile('InSight sol'))[0].text
     mars['mars_weather'] = mars_weather
 
     # Visit the Mars Facts webpage and use Pandas to scrape the table containing facts about the planet
